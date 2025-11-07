@@ -12,6 +12,11 @@ import Signup from "./pages/Signup";
 import StudentDashboard from "./pages/StudentDashboard";
 import TeacherDashboard from "./pages/TeacherDashboard";
 import Profile from "./pages/Profile";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import HowItWorks from "./pages/HowItWorks";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -55,6 +60,11 @@ const AppRoutes = () => {
       <Route path="/student/dashboard" element={<AppLayout><ProtectedRoute allowedRole="student"><StudentDashboard /></ProtectedRoute></AppLayout>} />
       <Route path="/teacher/dashboard" element={<AppLayout><ProtectedRoute allowedRole="teacher"><TeacherDashboard /></ProtectedRoute></AppLayout>} />
       <Route path="/profile" element={<AppLayout><ProtectedRoute><Profile /></ProtectedRoute></AppLayout>} />
+      <Route path="/about" element={<AppLayout><About /></AppLayout>} />
+      <Route path="/contact" element={<AppLayout><Contact /></AppLayout>} />
+      <Route path="/how-it-works" element={<AppLayout><HowItWorks /></AppLayout>} />
+      <Route path="/privacy" element={<AppLayout><Privacy /></AppLayout>} />
+      <Route path="/terms" element={<AppLayout><Terms /></AppLayout>} />
       {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
       <Route path="*" element={<NotFound />} />
     </Routes>
